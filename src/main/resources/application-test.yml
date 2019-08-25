@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: dev
+
+email: aaaaaaa.mail
+thread-pool: 10
+wordpress:
+  menus:
+    - title: Home
+      name: Home
+      path: /
+    - title: About
+      name: About
+      path: /about
+  themes:
+    defaultFolder: /wp-content/themes/
+  servers:
+    - ip: 127.0.0.1
+      path: /dev1
+    - ip: 127.0.0.2
+      path: /dev2
+    - ip: 127.0.0.3
+      path: /dev3
+
+
+spring:
+  profiles:
+    active: test
+
+email: aaaaaaa.mail
+thread-pool: 10
+wordpress:
+  menus:
+    - title: Home
+      name: Home
+      path: /
+    - title: About
+      name: About
+      path: /about
+  themes:
+    defaultFolder: /wp-content/themes/
+  servers:
+    - ip: 127.0.0.1
+      path: /dev1
+    - ip: 127.0.0.2
+      path: /dev2
+    - ip: 127.0.0.3
+      path: /dev3

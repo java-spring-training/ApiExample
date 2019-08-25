@@ -29,6 +29,7 @@ public class ProductController {
     public ProductResponse listAllProduct() {
 
         String name = apiConfig.getName();
+
         List<Product> productList = productService.getAll();
         return factory.toProductResponse(productList);
     }
