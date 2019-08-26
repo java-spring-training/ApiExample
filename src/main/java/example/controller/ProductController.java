@@ -1,6 +1,7 @@
 package example.controller;
 
 import example.config.ApiConfig;
+import example.config.WordPressProperties;
 import example.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,14 +16,17 @@ public class ProductController {
     private ProductService productService;
     private ProductResponseFactory factory;
     private ApiConfig apiConfig;
+    private WordPressProperties wordPressProperties;
 
     @Autowired
     public ProductController(ProductService productService,
                              ProductResponseFactory factory,
-                             ApiConfig apiConfig) {
+                             ApiConfig apiConfig,
+                             WordPressProperties wordPressProperties) {
         this.productService = productService;
         this.factory = factory;
         this.apiConfig = apiConfig;
+        this.wordPressProperties = wordPressProperties;
     }
 
     @GetMapping("/list")
