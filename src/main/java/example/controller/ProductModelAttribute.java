@@ -12,7 +12,7 @@ public class ProductModelAttribute {
     @Min(value = 0)
     private Integer id;
 
-    @NotEmpty
+    @NotNull
     @Size(max = 10)
     @Pattern(regexp="[a-zA-Z]+")
     private String name;

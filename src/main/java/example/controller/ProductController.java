@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import example.service.ProductService;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
@@ -107,8 +108,8 @@ public class ProductController {
      */
     @GetMapping("/listWithRequestHeader")
     public ProductResponse listWithRequestHeader(
-            @RequestHeader (name = "id") Integer id,
-            @RequestHeader (name = "name") Integer name) {
+            @Valid @NotNull(message = "thu afwebdksfw") @RequestHeader (name = "id") Integer id,
+            @RequestHeader (name = "name") String name) {
 
         log.info("API With Request Header");
 

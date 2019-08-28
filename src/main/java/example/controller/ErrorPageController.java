@@ -16,8 +16,8 @@ public class ErrorPageController implements ErrorController {
 
         log.error("Invalid Url");
 
-        return new Error(HttpStatus.BAD_REQUEST.value(),
-                HttpStatus.BAD_REQUEST.getReasonPhrase(),
+        return new Error(HttpStatus.NOT_FOUND.value(),
+                HttpStatus.NOT_FOUND.getReasonPhrase(),
                 "Entry Api with wrong Url");
     }
 
