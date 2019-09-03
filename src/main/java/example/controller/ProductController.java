@@ -2,7 +2,7 @@ package example.controller;
 
 import example.config.ApiConfig;
 import example.config.WordPressProperties;
-import example.domain.Product;
+import example.domain.entities.object.Products;
 import example.exception.ParameterInvalidException;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +44,7 @@ public class ProductController {
 
         String name = apiConfig.getName();
 
-        List<Product> productList = productService.getAll();
+        List<Products> productList = productService.getAll();
         return factory.toProductResponse(productList);
     }
 
@@ -70,7 +70,7 @@ public class ProductController {
 
         log.info("API With Request Parameters");
 
-        List<Product> productList = productService.getAll();
+        List<Products> productList = productService.getAll();
         return factory.toProductResponse(productList);
     }
 
@@ -84,7 +84,7 @@ public class ProductController {
 
         log.info("API With Request Body");
 
-        List<Product> productList = productService.getAll();
+        List<Products> productList = productService.getAll();
         return factory.toProductResponse(productList);
     }
 
@@ -98,7 +98,7 @@ public class ProductController {
 
         log.info("API With PathVariable");
 
-        List<Product> productList = productService.getAll();
+        List<Products> productList = productService.getAll();
         return factory.toProductResponse(productList);
     }
 
@@ -113,7 +113,7 @@ public class ProductController {
 
         log.info("API With Request Header");
 
-        List<Product> productList = productService.getAll();
+        List<Products> productList = productService.getAll();
         return factory.toProductResponse(productList);
     }
 

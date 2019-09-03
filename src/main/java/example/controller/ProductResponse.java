@@ -1,22 +1,22 @@
 package example.controller;
 
-import example.domain.Product;
+import example.domain.entities.object.Products;
 
 import java.util.List;
 
 public class ProductResponse {
 
-    List<Product> results;
+    List<ProductResult> results;
 
-    public ProductResponse(List<Product> results) {
+    public ProductResponse(List<ProductResult> results) {
         this.results = results;
     }
 
-    public List<Product> getResults() {
+    public List<ProductResult> getResults() {
         return results;
     }
 
-    public void setResults(List<Product> results) {
+    public void setResults(List<ProductResult> results) {
         this.results = results;
     }
 }

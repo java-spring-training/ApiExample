@@ -1,7 +1,7 @@
 package example.service;
 
-import example.domain.Product;
 import example.domain.ProductRepository;
+import example.domain.entities.object.Products;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> getAll() {
+    public List<Products> getAll() {
 
         return productRepository.getAll();
     }

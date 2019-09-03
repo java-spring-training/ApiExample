@@ -11,7 +11,7 @@ public class ErrorPageController implements ErrorController {
 
     private Logger log = Logger.getLogger(ErrorPageController.class);
 
-    @RequestMapping("/error")
+    @RequestMapping("/404")
     public Error HandlerErrorNotFoundUrl() {
 
         log.error("Invalid Url");
